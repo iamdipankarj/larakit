@@ -1,0 +1,83 @@
+{
+    "$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
+    "vcs": {
+        "enabled": false,
+        "clientKind": "git",
+        "useIgnoreFile": true
+    },
+    "files": {
+        "ignoreUnknown": false,
+        "ignore": [
+            "node_modules",
+            "dist",
+            "public",
+            "build",
+            "vendor",
+            "config",
+            "database",
+            "app",
+            "bootstrap",
+            "*.json",
+            "resources/**/*.css",
+            "*.lock"
+        ]
+    },
+    "formatter": {
+        "enabled": true,
+        "indentStyle": "space",
+        "indentWidth": 4
+    },
+    "organizeImports": {
+        "enabled": true
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "recommended": true,
+            "suspicious": {
+                "noExplicitAny": "off",
+                "noImplicitAnyLet": "off",
+                "noArrayIndexKey": "off",
+                "noShorthandPropertyOverrides": "off"
+            },
+            "security": {
+                "noDangerouslySetInnerHtml": "off"
+            },
+            "correctness": {
+                "useExhaustiveDependencies": "off"
+            },
+            "a11y": {
+                "noSvgWithoutTitle": "off",
+                "noRedundantAlt": "off",
+                "noLabelWithoutControl": "off",
+                "useFocusableInteractive": "off",
+                "useKeyWithClickEvents": "off",
+                "useSemanticElements": "off",
+                "useMediaCaption": "off"
+            },
+            "style": {
+                "noUselessElse": "off",
+                "useTemplate": "off",
+                "noNonNullAssertion": "off",
+                "useExponentiationOperator": "off",
+                "useDefaultParameterLast": "off"
+            },
+            "complexity": {
+                "useLiteralKeys": "off",
+                "noUselessTernary": "off",
+                "noThisInStatic": "off",
+                "noForEach": "off"
+            },
+            "performance": {
+                "noAccumulatingSpread": "off"
+            }
+        }
+    },
+    "javascript": {
+        "formatter": {
+            "quoteStyle": "single",
+            "semicolons": "asNeeded",
+            "trailingCommas": "none"
+        }
+    }
+}

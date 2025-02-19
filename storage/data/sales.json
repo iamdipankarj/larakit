@@ -1,0 +1,44 @@
+{
+    "sales": [
+        {
+            "sale_id": 101,
+            "customer_name": "John Doe",
+            "product": "Smartphone",
+            "amount": 599.99,
+            "sale_date": "2025-02-09",
+            "status": "ordered"
+        },
+        {
+            "sale_id": 102,
+            "customer_name": "Jane Smith",
+            "product": "Laptop",
+            "amount": 1299.99,
+            "sale_date": "2025-02-08",
+            "status": "shipped"
+        },
+        {
+            "sale_id": 103,
+            "customer_name": "Robert Johnson",
+            "product": "Wireless Headphones",
+            "amount": 199.99,
+            "sale_date": "2025-02-07",
+            "status": "shipped"
+        },
+        {
+            "sale_id": 104,
+            "customer_name": "Emily Davis",
+            "product": "Tablet",
+            "amount": 499.99,
+            "sale_date": "2025-02-06",
+            "status": "delivered"
+        },
+        {
+            "sale_id": 105,
+            "customer_name": "Michael Brown",
+            "product": "Smartwatch",
+            "amount": 299.99,
+            "sale_date": "2025-02-05",
+            "status": "delivered"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "sale_month": "2024-08",
+            "electronics": "100000",
+            "household": "100000",
+            "automotive": "0",
+            "kitchen": "0"
+        },
+        {
+            "sale_month": "2024-09",
+            "electronics": "275000",
+            "household": "0",
+            "automotive": "0",
+            "kitchen": "0"
+        },
+        {
+            "sale_month": "2024-10",
+            "electronics": "150000",
+            "household": "50000",
+            "automotive": "0",
+            "kitchen": "0"
+        },
+        {
+            "sale_month": "2024-11",
+            "electronics": "0",
+            "household": "500000",
+            "automotive": "0",
+            "kitchen": "0"
+        },
+        {
+            "sale_month": "2024-12",
+            "electronics": "100000",
+            "household": "450000",
+            "automotive": "800000",
+            "kitchen": "1600000"
+        },
+        {
+            "sale_month": "2025-01",
+            "electronics": "0",
+            "household": "100000",
+            "automotive": "100000",
+            "kitchen": "200000"
+        }
+    ]
+}

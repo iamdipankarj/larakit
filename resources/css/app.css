@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+    @apply min-h-screen;
+}
+
+.cta {
+    @apply text-white bg-primary hover:bg-primary/80 transition-colors font-medium rounded-full text-sm md:text-base px-4 py-2 focus:outline-none select-none;
+}
+
+.cta-outlined {
+    @apply inline-flex h-10 items-center justify-center rounded-full border border-gray-300 px-4 py-2 text-base font-semibold text-gray-900 transition-colors duration-200 hover:border-gray-500 focus:outline-none;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 142.1 76.2% 36.3%;
+        --primary-foreground: 355.7 100% 97.3%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 142.1 76.2% 36.3%;
+        --radius: 0.5rem;
+        --chart-1: 12 76% 61%;
+        --chart-2: 173 58% 39%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+        --sidebar-background: 0 0% 98%;
+        --sidebar-foreground: 240 5.3% 26.1%;
+        --sidebar-primary: 240 5.9% 10%;
+        --sidebar-primary-foreground: 0 0% 98%;
+        --sidebar-accent: 240 4.8% 95.9%;
+        --sidebar-accent-foreground: 240 5.9% 10%;
+        --sidebar-border: 220 13% 91%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+        --relax-blue: 214, 65%, 44%;
+        --relax-blue-foreground: 213, 66%, 49%;
+        --relax-green: 130, 40%, 49%;
+        --relax-green-foreground: 131, 47%, 54%;
+        --relax-red: 359, 48%, 47%;
+        --relax-red-foreground: 0, 62%, 56%;
+        --relax-sky: 186, 41%, 57%;
+        --relax-sky-foreground: 185, 47%, 59%;
+        --relax-yellow: 82, 56%, 45%;
+        --relax-yellow-foreground: 82, 58%, 48%;
+        --relax-warning: 48, 82%, 48%;
+        --relax-warning-foreground: 48, 82%, 48%;
+        --relax-brown: 18, 32%, 58%;
+        --relax-brown-foreground: 18, 32%, 58%;
+    }
+
+    .dark {
+        --background: 20 14.3% 4.1%;
+        --foreground: 0 0% 95%;
+        --card: 24 9.8% 10%;
+        --card-foreground: 0 0% 95%;
+        --popover: 0 0% 9%;
+        --popover-foreground: 0 0% 95%;
+        --primary: 142.1 70.6% 45.3%;
+        --primary-foreground: 144.9 80.4% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 0 0% 15%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 12 6.5% 15.1%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 85.7% 97.3%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 142.4 71.8% 29.2%;
+        --chart-1: 220 70% 50%;
+        --chart-2: 160 60% 45%;
+        --chart-3: 30 80% 55%;
+        --chart-4: 280 65% 60%;
+        --chart-5: 340 75% 55%;
+        --sidebar-background: 240 5.9% 10%;
+        --sidebar-foreground: 240 4.8% 95.9%;
+        --sidebar-primary: 224.3 76.3% 48%;
+        --sidebar-primary-foreground: 0 0% 100%;
+        --sidebar-accent: 240 3.7% 15.9%;
+        --sidebar-accent-foreground: 240 4.8% 95.9%;
+        --sidebar-border: 240 3.7% 15.9%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+        --relax-blue: 214, 65%, 44%;
+        --relax-blue-foreground: 213, 66%, 49%;
+        --relax-green: 130, 100%, 20%;
+        --relax-green-foreground: 131, 47%, 54%;
+        --relax-red: 359, 48%, 47%;
+        --relax-red-foreground: 0, 62%, 56%;
+        --relax-sky: 186, 41%, 57%;
+        --relax-sky-foreground: 185, 47%, 59%;
+        --relax-yellow: 82, 90%, 27%;
+        --relax-yellow-foreground: 82, 58%, 48%;
+        --relax-warning: 48, 94%, 27%;
+        --relax-warning-foreground: 48, 82%, 48%;
+        --relax-brown: 18, 35%, 32%;
+        --relax-brown-foreground: 18, 32%, 58%;
+    }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
