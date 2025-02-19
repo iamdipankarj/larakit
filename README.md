@@ -19,12 +19,12 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div style="text-align: center;">
+<div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="https://larakit.dipankarjana.com/android-chrome-192x192.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Larakit</h3>
+  <h3 align="center">Larakit</h3>
 
   <p style="text-align: center">
     A Laravel 11.x Sales Dashboard Starter Kit
