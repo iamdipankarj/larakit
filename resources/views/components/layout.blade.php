@@ -12,7 +12,7 @@
             if (isset($title)) {
                 $pageTitle = $title . ' - ' . config('app.name', 'Laravel');
             } else {
-                $pageTitle = config('app.name', 'Laravel') . ' - Larakit';
+                $pageTitle = config('app.name', 'Laravel') . ' - by Dipankar Jana';
             }
         @endphp
         <title>{{ $pageTitle }}</title>
