@@ -5,7 +5,7 @@
         </section>
         <article class="prose w-full max-w-3xl mx-auto motion-preset-slide-up motion-duration-300">
             <h2>1. Acceptance of Terms</h2>
-            <p>By accessing or using [Your App Name] ("Service"), you agree to comply with these Terms. If you do not agree, please do not use our Service.</p>
+            <p>By accessing or using <strong>Larakit</strong> ("Service"), you agree to comply with these Terms. If you do not agree, please do not use our Service.</p>
 
             <h2>2. Changes to Terms</h2>
             <p>We may update these Terms from time to time. Any changes will be posted on this page, and your continued use of the Service constitutes acceptance of the new Terms.</p>
@@ -41,7 +41,7 @@
             <p>These Terms are governed by the laws of [Your Jurisdiction]. Any disputes shall be resolved in the courts of [Your Jurisdiction].</p>
 
             <h2>10. Contact Information</h2>
-            <p>If you have any questions, please contact us at [Your Email Address].</p>
+            <p>If you have any questions, please contact us at john@acme.com.</p>
         </article>
     </main>
 </x-layout>
