@@ -14,7 +14,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans]
+                sans: ['Quicksand', ...defaultTheme.fontFamily.sans]
             },
             colors: {
                 primary: {
