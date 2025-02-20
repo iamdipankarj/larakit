@@ -23,24 +23,41 @@ class SocialiteController extends Controller
             $googleUser = Socialite::driver('google')->user();
 
             $organization = Organization::where(['code' => 'ACME'])->first();
-            $user = User::updateOrCreate(
-                ['email' => $googleUser->getEmail()],
-                [
+
+            // Check if user already exists
+            $user = User::where(['email' => $googleUser->getEmail()])->first();
+
+            if (isset($user)) {
+                $user->update([
                     'name' => $googleUser->getName(),
-                    'email' => $googleUser->getEmail(),
                     'avatar' => $googleUser->getAvatar(),
                     'google_id' => $googleUser->getId(),
                     'organization_id' => $organization->id,
                     'google_token' => $googleUser->token,
                     'google_refresh_token' => $googleUser->refreshToken
-                ]
-            );
+                ]);
 
-            $adminRole = Role::where('code', 'ADMIN')->first();
-            if (isset($adminRole) && !empty($adminRole && !$user->roles()->where('code', 'ADMIN')->exists())) {
-                $user->roles()->attach($adminRole);
+                Auth::login($user);
+            } else {
+                $user = User::updateOrCreate(
+                    ['email' => $googleUser->getEmail()],
+                    [
+                        'name' => $googleUser->getName(),
+                        'email' => $googleUser->getEmail(),
+                        'avatar' => $googleUser->getAvatar(),
+                        'google_id' => $googleUser->getId(),
+                        'organization_id' => $organization->id,
+                        'google_token' => $googleUser->token,
+                        'google_refresh_token' => $googleUser->refreshToken
+                    ]
+                );
+
+                $adminRole = Role::where('code', 'ADMIN')->first();
+                if (isset($adminRole) && !empty($adminRole && !$user->roles()->where('code', 'ADMIN')->exists())) {
+                    $user->roles()->attach($adminRole);
+                }
+                Auth::login($user);
             }
-            Auth::login($user);
 
             return redirect()->route('dashboard');
 
