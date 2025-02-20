@@ -21,10 +21,24 @@ class SocialiteController extends Controller
     public function handleGoogleCallback() {
         try {
             $googleUser = Socialite::driver('google')->user();
-            $isSuperAdmin = $googleUser->getEmail() === 'iamdipankarj@gmail.com';
 
-            if ($isSuperAdmin) {
-                $organization = Organization::where(['code' => 'ACME'])->first();
+            $organization = Organization::where(['code' => 'ACME'])->first();
+
+            // Check if user already exists
+            $user = User::where(['email' => $googleUser->getEmail()])->first();
+
+            if (isset($user)) {
+                $user->update([
+                    'name' => $googleUser->getName(),
+                    'avatar' => $googleUser->getAvatar(),
+                    'google_id' => $googleUser->getId(),
+                    'organization_id' => $organization->id,
+                    'google_token' => $googleUser->token,
+                    'google_refresh_token' => $googleUser->refreshToken
+                ]);
+
+                Auth::login($user);
+            } else {
                 $user = User::updateOrCreate(
                     ['email' => $googleUser->getEmail()],
                     [
@@ -43,26 +57,10 @@ class SocialiteController extends Controller
                     $user->roles()->attach($adminRole);
                 }
                 Auth::login($user);
-
-                return redirect()->route('dashboard');
-            } else {
-                // If some other user, allow them to login and update their OAUTH creds.
-                $user = User::where(['email' => $googleUser->getEmail()])->first();
-
-                if (isset($user)) {
-                    $user->update([
-                        'avatar' => $googleUser->getAvatar(),
-                        'google_id' => $googleUser->getId(),
-                        'google_token' => $googleUser->token,
-                        'google_refresh_token' => $googleUser->refreshToken
-                    ]);
-                    Auth::login($user);
-
-                    return redirect()->route('dashboard');
-                }
             }
 
-            return redirect()->route('login')->with('error', 'You are not authorized to login. Please ask your administrator to send you an invitation.');
+            return redirect()->route('dashboard');
+
         } catch (\Exception $e) {
             return redirect()->route('login')->with('error', $e->getMessage() || 'Failed to authenticate with Google');
         }
