@@ -6,7 +6,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://larakit.dipankarjana.com">
     <img src="https://larakit.dipankarjana.com/android-chrome-192x192.png" alt="Logo" width="80" height="80">
   </a>
 
