@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\SalesApiController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
@@ -64,10 +65,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::post('/api/getSales', [SalesApiController::class, 'getSales']);
+    Route::post('/api/generateReport', [SalesApiController::class, 'generateReport']);
+    Route::post('/api/salesMetrics', [SalesApiController::class, 'salesMetrics']);
+    Route::post('/api/salesVolumeMetrics', [SalesApiController::class, 'salesVolumeMetrics']);
+    Route::post('/api/activeSalesMetrics', [SalesApiController::class, 'activeSalesMetrics']);
+    Route::get('/api/generateCSV', [SalesApiController::class, 'generateCSVReport']);
 });
 
 require __DIR__.'/auth.php';
 require __DIR__.'/oauth.php';
-require __DIR__.'/api.php';
 require __DIR__.'/organizations.php';
 require __DIR__.'/invitations.php';
