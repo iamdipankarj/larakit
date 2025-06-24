@@ -26,15 +26,29 @@ class WidgetApiController extends Controller
 
     public function saveDashboard(Request $request): JsonResponse
     {
-        $validated = $request->validate([
-            'layout' => 'required|array'
-        ]);
+        try {
 
-        // upsert logic — only one row
-        $dashboard = Dashboard::firstOrNew(['id' => 1]);
-        $dashboard->layout = $validated['layout'];
-        $dashboard->save();
+            $layout = $request->input('layout');
 
-        return response()->json(['status' => 'ok']);
+            // upsert logic — only one row
+            $dashboard = Dashboard::firstOrNew(['id' => 1]);
+            $dashboard->layout = $layout;
+            $dashboard->save();
+
+            return response()->json(['status' => 'ok'], 200);
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            // Prevent redirect on validation error
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Validation failed',
+                'errors' => $e->errors()
+            ], 422);
+        } catch (\Throwable $e) {
+            // Prevent redirect on any other error
+            return response()->json([
+                'status' => 'error',
+                'message' => $e->getMessage()
+            ], 500);
+        }
     }
 }
