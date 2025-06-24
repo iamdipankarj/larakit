@@ -33,6 +33,7 @@ class WidgetApiController extends Controller
             // upsert logic — only one row
             $dashboard = Dashboard::firstOrNew(['id' => 1]);
             $dashboard->layout = $layout;
+            $dashboard->id = 1; // 🔥 force ID even if creating a new row
             $dashboard->save();
 
             return response()->json(['status' => 'ok'], 200);
