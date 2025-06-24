@@ -11,7 +11,7 @@ return [
         'http://localhost:8000',
         'http://localhost:3000',
         'https://dashboard-builder.dipankarjana.com',
-        'https://dashboard-builder.fly.dev/'
+        'https://dashboard-builder.fly.dev'
     ],
 
     'allowed_origins_patterns' => [],
