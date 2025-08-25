@@ -14,7 +14,6 @@
             <div class="container relative">
                 <div class="grid grid-cols-1">
                     <div class="text-center">
-                        <p class="py-[6px] text-white px-[18px] bg-green inline-block rounded-[6px]">Get Started</p>
                         <h1 class="capitalize mt-6 mx-auto max-w-[650px] text-[34px] leading-10 md:text-[52px] md:leading-tight font-semibold tracking-[1px]">Larakit</h1>
                         <p class="mt-6 mx-auto max-w-[480px] mb-4">A Laravel 11.x Starter Kit</p>
                         <div class="mt-12">
