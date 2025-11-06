@@ -98,21 +98,32 @@ _Below is an example of how you can instruct your audience on installing and set
 
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
-   ```sh
-   git clone https://github.com/iamdipankarj/larakit.git
-   ```
+  ```sh
+  git clone https://github.com/iamdipankarj/larakit.git
+  ```
 3. Install NPM packages
-   ```sh
-   yarn install
-   ```
+  ```sh
+  yarn install
+  ```
 4. Start Vite Server
-   ```sh
-   yarn dev
-   ```
+  ```sh
+  yarn dev
+  ```
 5. Start PHP Server
-   ```sh
-   php artisan serve
-   ```
+  ```sh
+  php artisan serve
+  ```
+6. Start PHP Server on Local Network
+
+  * Get your LAN ip by running ifconfig (Mac/Linux) or ipconfig (Windows)
+  * Make sure to change `APP_URL`, `SALES_API_BASE` and `APP_URL` to your LAN ip, e.g `http://192.168.0.57:8000`.
+  * Google OAuth login may not work on local area network due to restrictions on the OAuth policies of google. As a work around, you'd need to create a local only domain like `larakit.test` to be able to add it on google oauth client credentials.
+  ```sh
+  php artisan serve --host=0.0.0.0 --port=8000
+  ```
+  ```sh
+  yarn dev --host 192.168.0.57 --port 5174
+  ```
 
 <p style="text-align: right">(<a href="#readme-top">back to top</a>)</p>
 
