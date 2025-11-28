@@ -6,9 +6,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://larakit.dipankarjana.com">
+  <!-- <a href="https://larakit.dipankarjana.com">
     <img src="https://larakit.dipankarjana.com/android-chrome-192x192.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
   <h3 align="center">Larakit</h3>
 
