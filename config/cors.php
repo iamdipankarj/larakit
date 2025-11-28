@@ -9,6 +9,7 @@ return [
     'allowed_origins' => [
         'http://localhost:5173',
         'http://localhost:8000',
+        'http://192.168.0.57:8000',
         'http://localhost:3000',
         'https://dashboard-builder.dipankarjana.com',
         'https://dashboard-builder.fly.dev'
