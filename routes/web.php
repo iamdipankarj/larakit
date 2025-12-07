@@ -11,6 +11,10 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/health', function () {
+    return response()->json(['status' => 'OK'], 200);
+});
+
 Route::get('/about', function () {
     return view('about');
 })->name('about');
