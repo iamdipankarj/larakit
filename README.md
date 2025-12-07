@@ -61,55 +61,39 @@ Features:
 * Dark Mode & Responsive UI
 * OAuth with Laravel Socialite
 
-<p style="text-align: right">(<a href="#readme-top">back to top</a>)</p>
-
-
 ### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![React][React.js]][React-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+[![React][React.js]][React-url]
+[![Laravel][Laravel.com]][Laravel-url]
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
 
-## Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ## Installation
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
   ```sh
-  git clone https://github.com/iamdipankarj/larakit.git
+  git clone git@github.com:iamdipankarj/larakit.git
   ```
-3. Install NPM packages
+2. Install NPM packages
   ```sh
   yarn install
   ```
-4. Start Vite Server
+3. Start Vite Server
   ```sh
   yarn dev
   ```
-5. Start PHP Server
+4. Start PHP Server
   ```sh
   php artisan serve
   ```
-6. Start PHP Server on Local Network
+5. Start PHP Server on Local Network
 
   * Get your LAN ip by running ifconfig (Mac/Linux) or ipconfig (Windows)
   * Make sure to change `APP_URL`, `SALES_API_BASE` and `APP_URL` to your LAN ip, e.g `http://192.168.0.57:8000`.
@@ -120,8 +104,6 @@ _Below is an example of how you can instruct your audience on installing and set
   ```sh
   yarn dev --host 192.168.0.57 --port 5174
   ```
-
-<p style="text-align: right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Configuring Database
 * Make sure `postgresql` is installed in your system.
