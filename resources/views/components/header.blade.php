@@ -1,4 +1,4 @@
-<header class="sticky inset-x-0 top-0 z-20">
+<header class="sticky inset-x-0 top-0 z-50">
 {{--    <div class="absolute inset-0 opacity-20 blur bg-conic-gradient"></div>--}}
     <div class="absolute inset-0 opacity-30 blur bg-super-gradient bg-super animate-move-super"></div>
     <div class="relative bg-white/95 py-4 backdrop-blur-lg">
