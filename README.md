@@ -6,9 +6,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <!-- <a href="https://larakit.dipankarjana.com">
+  <a href="https://larakit.dipankarjana.com">
     <img src="https://larakit.dipankarjana.com/android-chrome-192x192.png" alt="Logo" width="80" height="80">
-  </a> -->
+  </a>
 
   <h3 align="center">Larakit</h3>
 
@@ -18,8 +18,6 @@
     <a href="https://larakit.dipankarjana.com/">View Demo</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -46,8 +44,6 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -84,7 +80,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+## Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
@@ -92,7 +88,7 @@ This is an example of how to list things you need to use the software and how to
   npm install npm@latest -g
   ```
 
-### Installation
+## Installation
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
@@ -127,7 +123,40 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <p style="text-align: right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
+## Configuring Database
+* Make sure `postgresql` is installed in your system.
+* You can use [Homebrew](https://formulae.brew.sh/formula/postgresql@14) if you are on a mac.
+* After installing, run `brew services start postgresql` to start the service.
+* Once you're in the psql shell. Run the following.
+
+Drop any existing ones with the same name.
+```bash
+DROP DATABASE IF EXISTS larakit;
+```
+
+Drop role if exists, if you know your psql role, you can use that one.
+
+```bash
+DROP ROLE IF EXISTS <YOUR_USERNAME>;
+```
+
+Create a role with password.
+```bash
+CREATE ROLE <YOUR_USERNAME> WITH LOGIN PASSWORD 'admin';
+```
+
+Create the database and link it to the role you just created.
+```bash
+CREATE DATABASE larakit OWNER <YOUR_USERNAME>;
+```
+
+Once created, make sure to configure it on the laravel .env file. Once done, run the following to migrate the database and populate it with some seed data required for the application to work.
+
+```bash
+php artisan migrate
+php artisan db:seed
+```
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
